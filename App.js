@@ -5,6 +5,7 @@ import About from "./Component.js/About/About";
 import Home from "./Component.js/Home/Home";
 import Products from "./Component.js/Products/Products";
 import { Box, NativeBaseProvider } from "native-base";
+import NavBar from "./Component.js/Shared/Navbar/NavBar";
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
         <Text>Hii Shafiur ! i am Hare. What's up guru? </Text>
         <StatusBar style="auto" />
         <NativeRouter>
+
+
           <Link to="/">
             <Text> Home </Text>
           </Link>
@@ -30,7 +33,7 @@ export default function App() {
           </Link>
 
           <Routes>
-            <Route path="/" element={<Home></Home>}></Route>
+            <Route path="/" element={<NavBar></NavBar>}></Route>
 
             <Route path="/home" element={<Home></Home>}></Route>
             <Route path="/about" element={<About></About>}></Route>

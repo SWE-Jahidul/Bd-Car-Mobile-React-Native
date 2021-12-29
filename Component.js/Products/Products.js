@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import { View, Text, ScrollView } from "react-native";
+import { Heading } from "native-base";
 import Product from "./Product";
 
 export default function Products() {
@@ -14,7 +15,9 @@ export default function Products() {
   }, []);
   return (
     <View>
-      <Text> i am Products {products.length}</Text>
+      <Heading textAlign="left" ml="3" mb="5" mt="5">
+        Product
+      </Heading>
 
       <ScrollView>
         {products.map((product) => (
